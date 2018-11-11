@@ -1,0 +1,15 @@
+<a href="{% url 'about' %}">About Project</a>
+
+{% block content %}
+
+<h1> Words Counter </h1>
+
+<form action="{% url 'counter' %}"> <!-- здесь вставляем ссылку, она должна вести на url из urls.py, ИМЯ у этого url - counter-->
+    <textarea name="fulltext" id="" cols="40" rows="5"></textarea> <!--продолжение - так нужно, чтобы можно было менять url только в url.py, но не дезть в темплит - в темплите всегда используем внутреннюю реализацию, через имя (name = 'counter')-->
+    <br/>
+    <textarea name="most_common_words_qty" id="" cols="3" rows="1">1</textarea>
+    <br/>
+    <input type="submit" value="Count"></input>
+</form>
+
+{% endblock %}

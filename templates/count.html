@@ -1,0 +1,22 @@
+{% extends "home.html" %}
+
+{% block content %}
+
+<h1>Words Counter</h1>
+
+<a href="{% url 'home' %}">
+    <button type="button">Count again!</button>
+</a>
+
+<h2>Original text:</h2>
+    {{ original_text }}
+
+<h3>There are <b>{{ quantity }}</b> wordы in your text</h3>
+<h3>Words repetition statistics:</h3>
+    <ol>
+        {% for word, repetition_numb in words_data %}
+            <li> "{{ word }}" - <b> {{ repetition_numb }} </b> time(s) </li> 
+        {% endfor %}
+    </ol>
+
+{% endblock %}
