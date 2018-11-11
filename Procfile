@@ -1,1 +1,1 @@
-web: gunicorn  django-wordscounter.wsgi --log-file -
+web: gunicorn  wordcounter-project.wsgi --log-file -
