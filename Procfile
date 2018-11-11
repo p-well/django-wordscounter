@@ -1,1 +1,1 @@
-web: gunicorn  wordscounter-project.wsgi --log-file -
+web: gunicorn  wordscounter.wsgi --log-file -
